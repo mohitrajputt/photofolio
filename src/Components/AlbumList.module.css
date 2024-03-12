@@ -1,0 +1,46 @@
+.albumSection{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.albumContent{
+    width: 80%;
+}
+
+/* Style for album header */
+
+.albumHeader{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.albumHeading{
+    font-size: 2rem;
+    color: rebeccapurple;
+}
+
+.AlbumButton{
+    /* color: blue; */
+    border: 2px solid currentColor;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.backButton{
+    width: 44px;
+    height: 44px;
+    background-color: #fcfcfc;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0,0,0,.24);
+    cursor: pointer;
+    text-align: center;
+    padding-top: 4px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,15 @@
+.photoSection{
+    margin-top: 24px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.photoContainer{
+    border: 1px solid black;
+    display: inline-block;
+    width: 49%;
+    height: 300px;
+}
