@@ -1,14 +1,19 @@
 import { useRef } from "react";
-import styles from "./AddImages.module.css";
+import styles from "./ImageForm.module.css";
 
-const AddImages = ({handleImagesData}) => {
+const AddImages = ({AddPhoto}) => {
     let titleRef = useRef(null);
     let urlRef = useRef(null);
 
     function handleSubmit(e){
         e.preventDefault();
 
-        handleImagesData(titleRef.current.value,urlRef.current.value);
+        const photoData = {
+            title: titleRef.current.value,
+            url: urlRef.current.value
+        }
+
+        AddPhoto(photoData);
 
         titleRef.current.value = "";
         urlRef.current.value = "";

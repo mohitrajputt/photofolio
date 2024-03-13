@@ -1,14 +1,13 @@
 import { useRef } from "react";
-import styles from "./CreateAlbum.module.css";
+import styles from "./AlbumForm.module.css";
 
-const CreateAlbum = ({handleAlbumName}) => {
+const AlbumForm = ({CreateAlbum}) => {
     let albumRef = useRef(null);
 
     function handleSubmit(e){
         e.preventDefault();
-        // call a props to store input value
-        handleAlbumName(albumRef.current.value);
-        console.log(albumRef.current.value);
+
+        CreateAlbum(albumRef.current.value);
         albumRef.current.value = "";
     }
 
@@ -26,4 +25,4 @@ const CreateAlbum = ({handleAlbumName}) => {
     )
 }
 
-export default CreateAlbum;
+export default AlbumForm;
