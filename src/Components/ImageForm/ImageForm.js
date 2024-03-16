@@ -18,6 +18,7 @@ const AddImages = ({AddPhoto}) => {
         titleRef.current.value = "";
         urlRef.current.value = "";
     }
+    
     return(
         <form className={styles.addImageForm} onSubmit={handleSubmit} >
             <p className={styles.FormLabel} >Add Images </p>

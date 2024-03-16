@@ -30,10 +30,9 @@ function App() {
 
   // Handle Album Creation
   async function CreateAlbum(albumName) {
-    const album = await addDoc(collection(db, "albums"), {
+    await addDoc(collection(db, "albums"), {
       album: albumName
     });
-    await addDoc(collection(album, "photos"), {});
     toast.success("New Album Created !");
   }
 
@@ -48,7 +47,7 @@ function App() {
       })
       setAlbumData(albums);
     })
-  })
+  },[]);
 
   // Handle Switching 
   function handleSwitchRender(album) {

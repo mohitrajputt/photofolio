@@ -15,6 +15,7 @@ const AlbumCollection = ({handleAlbumForm,albumFormStatus,albumData,handleSwitch
                             <p>{album.album}</p>
                         </div>
                     ))}
+                    {albumData.length === 0 ? <p>😒 No item!, Add new album</p> : null}
                 </div>
             </div>
         </section>

@@ -1,20 +1,23 @@
 .photoSection{
-    margin-top: 24px;
+    margin: 44px 0;
     box-sizing: border-box;
     width: 100%;
     display: flex;
+    padding: 0 14px;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .photoContainer{
     display: inline-block;
-    width: 49%;
+    width: 48%;
     height: 300px;
-    margin: 12px 0;
+    margin: 24px 0;
     position: relative;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .imageLabel{
@@ -33,15 +36,15 @@
 .buttons{
     cursor: pointer;
     position: absolute;
-    top: 4px;
-    right: 8px;
+    top: 8px;
+    right: -55px;
     width: 120px;
     height: 30px;
     display: none;
 }
 
 .buttons div{
-    width: 50%;
+    width: 40%;
     box-sizing: border-box;
     margin: 4px;
 }
@@ -57,17 +60,10 @@
     position: absolute;
 }
 
-.emptyImageCollection{
-    color: red;
-    width: 100%;
-    font-size: 3rem;
-    text-align: center;
-}
-
 .imageCount{
     position: absolute;
-    top: -40px;
-    left: 46%;
+    top: -38px;
+    left: 45%;
     color: gray;
     font-size: small;
 }

@@ -1,5 +1,5 @@
 .albumSection{
-    margin-top: 50px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -17,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .albumHeading{
@@ -46,7 +47,7 @@
 }
 
 
-/* cccccccccccccc */
+/* container */
 
 .albumContentContainer{
     padding: 12px;
@@ -54,6 +55,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .album{
@@ -63,12 +65,14 @@
     color: green;
     margin: 12px;
     box-sizing: border-box;
+    border-radius: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-transform: capitalize;
     cursor: pointer;
     transition: all 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .album:hover{

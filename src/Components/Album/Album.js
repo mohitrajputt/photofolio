@@ -12,7 +12,7 @@ const Album = ({imageFormStatus, handleImageForm, handleSwitchRender, album}) =>
                     <div className={styles.albumHeading} >Album: <span className={styles.albumName} >{album.album}</span> </div>
                     <div className={styles.AlbumButton} onClick={handleImageForm} id={imageFormStatus? "red" : "blue"} >{imageFormStatus? "cancel":"Add image"}</div>
                 </div>
-                <Photos albumId={album.id} handleImageForm={handleImageForm} />
+                <Photos albumId={album.id} handleImageForm={handleImageForm}  />
             </div>
         </section>
     )

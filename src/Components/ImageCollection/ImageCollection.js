@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import ImageViewer from "../Image Viewer/ImageViewer";
 
 
-const Photos = ({albumId,handleImageForm}) => {
+const Photos = ({albumId}) => {
 
     const [photos,setPhotos] = useState([]);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -30,11 +30,6 @@ const Photos = ({albumId,handleImageForm}) => {
        toast.success("Photo Deleted");
     }
 
-    function handleUpdate(photoId) {
-      handleImageForm();
-      // alert('Updated function will be updated');
-    }
-
     function handleImageView(index) {
       setCurrentImageIndex(index);
       setImageViewStatus(!imageViewStatus);
@@ -50,18 +45,18 @@ const Photos = ({albumId,handleImageForm}) => {
 
     return (
         <div className={styles.photoSection} >
-            {photos.length == 0 ? <p className={styles.emptyImageCollection} >😒 No item!, Add new images</p> : <p className={styles.imageCount} > Total Images ({photos.length}) </p> }
             {photos.map((photo,id) => (
-                <div className={styles.photoContainer} key={id} onClick={() => handleImageView(id)} >
+              <div className={styles.photoContainer} key={id} onClick={() => handleImageView(id)} >
                     <div className={styles.buttons} >
                       <div><img src="delete.png" alt="dlt" onClick={(e) => { e.stopPropagation(); handleDelete(photo.id)}} /></div>
-                      <div><img src="edit.png" alt="edit" onClick={(e) => { e.stopPropagation(); handleUpdate(photo.id)}} /></div>
+                      {/* <div><img src="edit.png" alt="edit" onClick={(e) => { e.stopPropagation(); handleUpdate(photo.id)}} /></div> */}
                     </div>
                     {photo.url ?<>
                     <img src={photo.url} width="100%" height="100%" alt="img-thumbnail" />
                     <p className={styles.imageLabel} >{photo.title}</p></> : null }
                 </div>
             ))}
+            {photos.length == 0 ? <p  >😒 No item!, Add new images</p> : <p className={styles.imageCount} > Total Images ({photos.length}) </p> }
             {/* Image Viewer */}
             {imageViewStatus? 
             <ImageViewer 
