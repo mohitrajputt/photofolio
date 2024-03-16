@@ -5,10 +5,69 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 }
 
 .photoContainer{
     display: inline-block;
     width: 49%;
     height: 300px;
+    margin: 12px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.imageLabel{
+    line-height: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    padding: 6px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+}
+
+.buttons{
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    width: 120px;
+    height: 30px;
+    display: none;
+}
+
+.buttons div{
+    width: 50%;
+    box-sizing: border-box;
+    margin: 4px;
+}
+
+.buttons div img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.photoContainer:hover .buttons{
+    display: flex;
+    z-index: 100;
+    position: absolute;
+}
+
+.emptyImageCollection{
+    color: red;
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.imageCount{
+    position: absolute;
+    top: -40px;
+    left: 46%;
+    color: gray;
+    font-size: small;
 }

@@ -5,12 +5,12 @@ const AlbumCollection = ({handleAlbumForm,albumFormStatus,albumData,handleSwitch
         <section className={styles.albumSection} >
             <div className={styles.albumContent} >
                 <div className={styles.albumHeader} >
-                    <div className={styles.albumHeading} >Your albums</div>
+                    <div className={styles.albumHeading} >Albums</div>
                     <div className={styles.AlbumButton} onClick={handleAlbumForm} id={albumFormStatus? "red" : "blue"} >{albumFormStatus? "cancel":"Add album"}</div>
                 </div>
                 <div className={styles.albumContentContainer} >
                     {albumData.map((album,id) => (
-                        <div key={id} className={styles.album} onClick={ () => handleSwitchRender(album.id)} >
+                        <div key={id} className={styles.album} onClick={ () => handleSwitchRender(album)} >
                             <img src="image-thumb.png" width="80%" alt="img-thumbnail" />
                             <p>{album.album}</p>
                         </div>

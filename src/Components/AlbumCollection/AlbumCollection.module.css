@@ -84,3 +84,8 @@
     text-align: center;
 }
 
+.albumName{
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: capitalize;
+}

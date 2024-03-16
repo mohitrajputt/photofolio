@@ -3,6 +3,9 @@ import AlbumCollection from "./Components/AlbumCollection/AlbumCollection";
 import Album from "./Components/Album/Album";
 import ImageForm from "./Components/ImageForm/ImageForm";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { useEffect, useState } from "react"
 import {db} from "./FirebaseConfig";
 import { collection, addDoc, onSnapshot } from "firebase/firestore";
@@ -13,7 +16,7 @@ function App() {
   const [imageFormStatus,setImageFormStatus] = useState(false);
   const [albumData,setAlbumData] = useState([]);
   const [switchRendering,setSwitchRendering] = useState(true);
-  const [albumId,setAlbumId] = useState("");
+  const [album,setAlbum] = useState([]);
 
   // Handle Album Form Component
   function handleAlbumForm() {
@@ -31,6 +34,7 @@ function App() {
       album: albumName
     });
     await addDoc(collection(album, "photos"), {});
+    toast.success("New Album Created !");
   }
 
   // Render Album Data
@@ -47,19 +51,21 @@ function App() {
   })
 
   // Handle Switching 
-  function handleSwitchRender(Id) {
+  function handleSwitchRender(album) {
     setSwitchRendering(!switchRendering);
-    setAlbumId(Id)
+    setAlbum(album)
   }
 
   // Add Image
   async function AddPhoto(photoData) {
-    const photoRef = collection(db, "albums", albumId, "photos");
+    const photoRef = collection(db, "albums", album.id, "photos");
     await addDoc(photoRef, photoData);
+    toast.success("New Image Added !");
   }
 
   return (
     <>
+    <ToastContainer />
       {/* Navbar Component */}
       <nav>
         <div className="navbar-content" >
@@ -84,7 +90,7 @@ function App() {
           <Album
           handleSwitchRender={handleSwitchRender}
           handleImageForm={handleImageForm} imageFormStatus={imageFormStatus}
-          albumId={albumId} />
+          album={album} />
           </>
       }
     </>

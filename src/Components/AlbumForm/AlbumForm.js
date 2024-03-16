@@ -15,7 +15,7 @@ const AlbumForm = ({CreateAlbum}) => {
         <form className={styles.CreateAlbumForm} onSubmit={handleSubmit} >
             <p className={styles.FormLabel} >Create an album</p>
             <div className={styles.container} >
-                <input placeholder="Album Name" ref={albumRef} />
+                <input placeholder="Album Name" ref={albumRef} required/>
                 <div className={styles.buttonContainer} > 
                     <button className={styles.resetButton} type="reset" >Clear</button>
                     <button className={styles.submitButton} type="submit" >Create</button>
