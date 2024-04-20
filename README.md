@@ -10,9 +10,9 @@ PhotoFolio is an online photo album React app designed for learning purposes. It
 
 ## Demo
 
-![Demo GIF](demo.gif)
+![Demo GIF](https://github.com/mohitrajputt/photofolio/blob/e617b04e96f3eb4a79ccfbf35f0d78884ac82330/public/demo.gif)
 
-[Live Demo](#) - *Link will be updated*
+[Live Demo](#) - (https://mohitrajputt.github.io/photofolio/)
 
 ## Installation
 
