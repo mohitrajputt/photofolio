@@ -6,7 +6,7 @@ function ImageViewer({imageUrl,handleImageView, handleNextImage, handlePrevImage
             <div className={styles.ImageController} >
                 <div className={styles.prevButton} onClick={handlePrevImage} >&#10094;</div>
                 <div className={styles.ImageView} >
-                    <img src={imageUrl} />
+                    <img src={imageUrl} alt="" />
                 </div>
                 <div className={styles.nextButton} onClick={handleNextImage} >&#10095;</div>
             </div>

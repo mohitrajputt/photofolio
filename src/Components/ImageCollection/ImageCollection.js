@@ -56,7 +56,7 @@ const Photos = ({albumId}) => {
                     <p className={styles.imageLabel} >{photo.title}</p></> : null }
                 </div>
             ))}
-            {photos.length == 0 ? <p  >😒 No item!, Add new images</p> : <p className={styles.imageCount} > Total Images ({photos.length}) </p> }
+            {photos.length === 0 ? <p  >😒 No item!, Add new images</p> : <p className={styles.imageCount} > Total Images ({photos.length}) </p> }
             {/* Image Viewer */}
             {imageViewStatus? 
             <ImageViewer 
