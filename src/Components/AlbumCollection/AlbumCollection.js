@@ -1,6 +1,7 @@
-import styles from "./AlbumCollection.module.css"
+import styles from "./AlbumCollection.module.css";
+import thumbnail from "../../assets/image-thumb.png";
 
-const AlbumCollection = ({handleAlbumForm,albumFormStatus,albumData,handleSwitchRender}) => {
+const AlbumCollection = ({handleAlbumForm,albumFormStatus,album,handleSwitchRender}) => {
     return(
         <section className={styles.albumSection} >
             <div className={styles.albumContent} >
@@ -9,13 +10,13 @@ const AlbumCollection = ({handleAlbumForm,albumFormStatus,albumData,handleSwitch
                     <div className={styles.AlbumButton} onClick={handleAlbumForm} id={albumFormStatus? "red" : "blue"} >{albumFormStatus? "cancel":"Add album"}</div>
                 </div>
                 <div className={styles.albumContentContainer} >
-                    {albumData.map((album,id) => (
-                        <div key={id} className={styles.album} onClick={ () => handleSwitchRender(album)} >
-                            <img src="image-thumb.png" width="80%" alt="img-thumbnail" />
-                            <p>{album.album}</p>
+                    {album.map((albumData,id) => (
+                        <div key={id} className={styles.album} onClick={ () => handleSwitchRender(albumData)} >
+                            <img src={thumbnail} width="80%" alt="img-thumbnail" />
+                            <p>{albumData.albumName}</p>
                         </div>
                     ))}
-                    {albumData.length === 0 ? <p>😒 No item!, Add new album</p> : null}
+                    {album.length === 0 ? <p>😒 No item!, Add new album</p> : null}
                 </div>
             </div>
         </section>

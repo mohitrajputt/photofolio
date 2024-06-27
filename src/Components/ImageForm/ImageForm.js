@@ -23,8 +23,8 @@ const AddImages = ({AddPhoto}) => {
         <form className={styles.addImageForm} onSubmit={handleSubmit} >
             <p className={styles.FormLabel} >Add Images </p>
             <div className={styles.container} >
-                <input placeholder="Title" ref={titleRef} />
-                <input placeholder="Image URL" ref={urlRef} />
+                <input placeholder="Title" ref={titleRef} required />
+                <input placeholder="Image URL" ref={urlRef} required />
                 <div className={styles.buttonContainer} > 
                     <button className={styles.resetButton} type="reset" >Clear</button>
                     <button className={styles.submitButton} type="submit" >Create</button>
